@@ -2,9 +2,8 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Bookstore.Models;
 
-
 namespace Bookstore.Controllers;
-
+/*
 public class BooksController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -30,12 +29,12 @@ public class BooksController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
-/*
+*/
 public class BooksController : Controller
 {
     private readonly BooksRepository _bookRepository;
 
-    public BooksController(AppDbContext context)
+    public BooksController(ApplicationDbContext context)
     {
         _bookRepository = new BooksRepository(context);
     }
@@ -46,4 +45,3 @@ public class BooksController : Controller
         return View(books);
     }
 }
-*/

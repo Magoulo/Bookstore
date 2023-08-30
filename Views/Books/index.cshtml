@@ -6,3 +6,41 @@
     <h1 class="display-4">This is where the Books are!</h1>
 </div>
 
+<div>
+@model IEnumerable<Bookstore.Models.Books>
+
+@{
+    ViewData["Title"] = "Books Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Books</h1>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Release_Year</th>
+            <!-- Add other columns as needed -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var books in Model)
+        {
+            <tr>
+                <td>@books.Book_Id</td>
+                <td>@books.Name</td>
+                <td>@books.Author</td>
+                <td>@books.Pages</td>
+                <td>@books.Release_Year</td>
+                <!-- Add other columns data as needed -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+</div>
