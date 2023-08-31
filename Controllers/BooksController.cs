@@ -44,4 +44,24 @@ public class BooksController : Controller
         var books = _bookRepository.GetAllBooks();
         return View(books);
     }
+
+
+    // Create GET and POST
+    public IActionResult Create()
+    {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Create(Books book)
+    {
+        if (ModelState.IsValid)
+        {
+            _bookRepository.AddBook(book);
+            return RedirectToAction("Index");
+        }
+
+        return View(book);
+    }
+
+
 }

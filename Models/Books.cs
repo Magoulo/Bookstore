@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 namespace Bookstore.Models;
 
-public class Books 
+public class Book 
 {
     [Key]
     public int Book_Id {get; set;}
@@ -11,7 +11,7 @@ public class Books
     public int Pages {get; set;}
     public string Release_Year {get; set;}
 
-    public Books()
+    public Book()
     {
 
     }

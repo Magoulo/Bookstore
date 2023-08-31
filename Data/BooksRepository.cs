@@ -9,8 +9,14 @@ public class BooksRepository
         _context = context;
     }
 
-    public IEnumerable<Books> GetAllBooks()
+    public IEnumerable<Book> GetAllBooks()
     {
-        return (IEnumerable<Books>)_context.Books.ToList();
+        return (IEnumerable<Book>)_context.Books.ToList();
+    }
+
+    public IEnumerable<Book> AddBook(Book Book)
+    {
+        //TODO ADD BOOK TO DB and replace the row below
+        return (IEnumerable<Book>)_context.Books.ToList();
     }
 }
