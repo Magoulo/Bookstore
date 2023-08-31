@@ -52,7 +52,7 @@ public class BooksController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult Create(Books book)
+    public IActionResult Create(Book book)
     {
         if (ModelState.IsValid)
         {

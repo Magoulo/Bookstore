@@ -11,7 +11,7 @@ namespace Bookstore.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Books",
+                name: "Book",
                 columns: table => new
                 {
                     Book_Id = table.Column<int>(type: "int", nullable: false)
@@ -23,7 +23,7 @@ namespace Bookstore.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Books", x => x.Book_Id);
+                    table.PrimaryKey("PK_Book", x => x.Book_Id);
                 });
         }
 
@@ -31,7 +31,7 @@ namespace Bookstore.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Books");
+                name: "Book");
         }
     }
 }

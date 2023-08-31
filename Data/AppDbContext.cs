@@ -6,5 +6,5 @@ public class ApplicationDbContext : DbContext
     {
     }
 
-    public DbSet<Books> Books { get; set; }
+    public DbSet<Book> Book { get; set; }
 }

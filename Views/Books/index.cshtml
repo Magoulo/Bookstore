@@ -7,7 +7,7 @@
 </div>
 
 <div>
-    @model IEnumerable<Bookstore.Models.Books>
+    @model IEnumerable<Bookstore.Models.Book>
 
     @{
         ViewData["Title"] = "Books Page";
@@ -21,7 +21,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
+                <th>Title</th>
                 <th>Author</th>
                 <th>Pages</th>
                 <th>Release_Year</th>
@@ -29,14 +29,14 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var books in Model)
+            @foreach (var book in Model)
             {
                 <tr>
-                    <td>@books.Book_Id</td>
-                    <td>@books.Name</td>
-                    <td>@books.Author</td>
-                    <td>@books.Pages</td>
-                    <td>@books.Release_Year</td>
+                    <td>@book.Book_Id</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Pages</td>
+                    <td>@book.Release_Year</td>
                     <!-- Add other columns data as needed -->
                 </tr>
             }
@@ -47,8 +47,10 @@
 </div>
 
 <div class="text-center">
-    <a asp-action="Create" asp-controller="Books" class="rounded-full bg-slate-700 text-white w-40 h-14 mt-10 inline-flex justify-center items-center">
+    <a asp-action="Create" asp-controller="Books" class="btn btn-dark mt-3 rounded-pill">
         Create new Book
     </a>
 </div>
+
+
 

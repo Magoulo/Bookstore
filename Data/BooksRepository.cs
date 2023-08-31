@@ -11,12 +11,12 @@ public class BooksRepository
 
     public IEnumerable<Book> GetAllBooks()
     {
-        return (IEnumerable<Book>)_context.Books.ToList();
+        return (IEnumerable<Book>)_context.Book.ToList();
     }
 
-    public IEnumerable<Book> AddBook(Book Book)
+    public IEnumerable<Book> AddBook(Book book)
     {
         //TODO ADD BOOK TO DB and replace the row below
-        return (IEnumerable<Book>)_context.Books.ToList();
+        return (IEnumerable<Book>)_context.Book.ToList();
     }
 }
